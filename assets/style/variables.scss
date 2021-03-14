@@ -1,0 +1,148 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$body-font-family: 'Roboto Condensed', sans-serif;
+$heading-font-family: 'Roboto Condensed', sans-serif;
+$headings: map-merge($headings, (
+  'h1': (
+    'size': 6rem,
+    'weight': 300,
+    'line-height': 6rem,
+    'letter-spacing': -.015625em,
+    'font-family': $heading-font-family
+  ),
+  'h2': (
+    'size': 3.75rem,
+    'weight': 300,
+    'line-height': 3.75rem,
+    'letter-spacing': -.0083333333em,
+    'font-family': $heading-font-family
+  ),
+  'h3': (
+    'size': 3rem,
+    'weight': 400,
+    'line-height': 3.125rem,
+    'letter-spacing': normal,
+    'font-family': $heading-font-family
+  ),
+  'h4': (
+    'size': 2.125rem,
+    'weight': 400,
+    'line-height': 2.5rem,
+    'letter-spacing': .0073529412em,
+    'font-family': $heading-font-family
+  ),
+  'h5': (
+    'size': 1.5rem,
+    'weight': 400,
+    'line-height': 2rem,
+    'letter-spacing': normal,
+    'font-family': $heading-font-family
+  ),
+  'h6': (
+    'size': 1.25rem,
+    'weight': 500,
+    'line-height': 2rem,
+    'letter-spacing': .0125em,
+    'font-family': $heading-font-family
+  )
+));
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.theme--light.v-application {
+  background: #8360c3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2ebf91, #033F60);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2ebf91, #033F60); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.theme--dark.v-application {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.theme--dark .v-sheet, .theme--dark .v-card-drawer, .theme--dark.v-picker__body, .theme--dark.v-toolbar, .theme--dark.v-table, .theme--dark.v-datatable .v-datatable__actions, .theme--dark.v-data-table {
+  background: #181E21;
+}
+
+.theme--light.v-toolbar, .theme--light.v-navigation-drawer {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.theme--dark.v-list {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.theme--light.v-toolbar {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.theme--dark.v-toolbar {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(255, 255, 255, 0.12);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.v-navigation-drawer--mini-variant .v-list-item > div {
+  height: 40px;
+}
+
+.theme--dark .ql-editor.ql-blank:before {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+.theme--light .ql-editor.ql-blank:before {
+  color: rgba(0,0,0,0.54) !important;
+}
+
+.flashing {
+  animation: flashingIcon 2.75s infinite;
+}
+
+.theme--dark.v-list {
+  background: #181e21;
+}
+
+.theme--dark.v-toolbar, .theme--dark.v-navigation-drawer {
+  background-color: #181e21;
+}
+
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background-color: #181e21;
+}
+
+@keyframes flashingIcon {
+  0% {
+    opacity: 0.0;
+  }
+	49% {
+    opacity: 1.0;
+  }
+	50% {
+    opacity: 0.0;
+  }
+	99% {
+    opacity: 1.0;
+  }
+	100% {
+    opacity: 0.0;
+  }
+}
